@@ -1,5 +1,5 @@
 import request from "supertest";
-import { app } from "../../../server.mjs";
+import { app } from "../../server.mjs";
 
 describe("Security Tests", () => {
   it("should have security headers", async () => {

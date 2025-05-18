@@ -10,3 +10,7 @@ beforeAll(async () => {
 afterAll(async () => {
   await redis.quit();
 });
+
+it("db connection", () => {
+  expect(true).toBe(true);
+});

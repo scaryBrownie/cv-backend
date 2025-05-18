@@ -33,9 +33,6 @@ app.get("/health", (req, res) => {
   res.status(200).json({ success: true });
 });
 
-app.listen(process.env.PORT, () => {
-  //   systemLogger.info(`app running on ${process.env.PORT}`);
-  console.log(`app running on ${process.env.PORT}`);
-});
-
 app.use(errorHandler);
+
+export { app };

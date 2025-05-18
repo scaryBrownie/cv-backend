@@ -17,7 +17,7 @@ Hey! This is a simple backend for my CV website. It's built with Node.js, Expres
 ## Quick Start 🏁
 
 ```bash
-git clone https://github.com/scaryBrownie/cv-backend.git
+git clone https://github.com/fatihacan/cv-backend.git
 cd cv-backend
 npm install
 ```
@@ -25,16 +25,16 @@ npm install
 Create a `.env` file in the root:
 
 ```
-PORT=3000
+PORT=5001
 MONGO_URI=your_mongo_uri
 REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_PASSWORD=your_redis_password
 API_KEY=super_secret_api_key
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:5001
 ```
 
-Start the server:
+Start the server (dev):
 
 ```bash
 npm run dev
@@ -42,9 +42,32 @@ npm run dev
 
 ---
 
+## 🐳 Docker
+
+You can run this backend with Docker. The app now starts with `src/www.mjs` (see Dockerfile).
+Make sure you have MongoDB and Redis running and accessible from the container.
+
+Build the image:
+
+```bash
+docker build -t cv-backend .
+```
+
+Run the container:
+
+```bash
+docker run --env-file .env -p 5001:5001 cv-backend
+```
+
+- Your `.env` file must be in the project root (not inside the container).
+- MongoDB and Redis must be accessible from inside the container (use Docker network or external services).
+- The app listens on port 5001 by default (set in `.env`).
+
+---
+
 ## API Docs 📚
 
-Swagger UI: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+Swagger UI: [http://localhost:5001/api-docs](http://localhost:5001/api-docs)
 
 ---
 
