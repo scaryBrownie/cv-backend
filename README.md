@@ -17,7 +17,7 @@ Hey! This is a simple backend for my CV website. It's built with Node.js, Expres
 ## Quick Start 🏁
 
 ```bash
-git clone https://github.com/fatihacan/cv-backend.git
+git clone https://github.com/scaryBrownie/cv-backend.git
 cd cv-backend
 npm install
 ```
