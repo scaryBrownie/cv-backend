@@ -17,7 +17,7 @@ Hey! This is a simple backend for my CV website. It's built with Node.js, Expres
 ## Quick Start 🏁
 
 ```bash
-git clone https://github.com/fatihacan/cv-backend.git
+git clone https://github.com/scaryBrownie/cv-backend.git
 cd cv-backend
 npm install
 ```
@@ -31,7 +31,7 @@ REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_PASSWORD=your_redis_password
 API_KEY=super_secret_api_key
-FRONTEND_URL=http://localhost:5001
+FRONTEND_URL=http://localhost:3000
 ```
 
 Start the server (dev):
