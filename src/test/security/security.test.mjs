@@ -1,5 +1,5 @@
-const request = require("supertest");
-const { app } = require("../../server.mjs");
+import request from "supertest";
+import { app } from "../../server.mjs";
 
 describe("Security Tests", () => {
   it("should have security headers", async () => {

@@ -1,14 +1,15 @@
 {
   "name": "cvbackend",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/www.mjs",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "test:integration": "jest --testMatch='**/__tests__/integration/**/*.test.mjs'",
-    "test:security": "jest --testMatch='**/__tests__/security/**/*.test.mjs'"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testMatch='**/__tests__/integration/**/*.test.mjs'",
+    "test:security": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testMatch='**/__tests__/security/**/*.test.mjs'"
   },
   "keywords": [],
   "author": "",

@@ -20,5 +20,4 @@ build/
 .temp/
 .nyc_output/
 package-lock.json
-babel.config.js
 .gitattributes

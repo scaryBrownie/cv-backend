@@ -1,6 +1,6 @@
-const { app } = require("../../server.mjs");
-const request = require("supertest");
-const { decryptData } = require("../../util/hash.mjs");
+import { app } from "../../server.mjs";
+import request from "supertest";
+import { decryptData } from "../../util/hash.mjs";
 
 describe("Data Api Integration Tests", () => {
   const api_key = process.env.API_KEY;
