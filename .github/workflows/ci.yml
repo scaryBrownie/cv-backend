@@ -21,5 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Setup env
+        run: |
+          echo "PORT=5001" >> .env
+          echo "MONGO_URI=mongodb://localhost:27017/test" >> .env
+          echo "REDIS_HOST=localhost" >> .env
+          echo "REDIS_PORT=6379" >> .env
+          echo "API_KEY=test_api_key" >> .env
+          echo "FRONTEND_URL=http://localhost:3000" >> .env
+
       - name: Run tests
         run: npm test
