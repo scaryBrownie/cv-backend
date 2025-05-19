@@ -1,5 +1,5 @@
-import request from "supertest";
-import { app } from "../../server.mjs";
+const request = require("supertest");
+const { app } = require("../../server.mjs");
 
 describe("Error handling test", () => {
   it("invalid route", async () => {

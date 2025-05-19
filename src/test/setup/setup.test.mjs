@@ -1,6 +1,6 @@
-import dotenv from "dotenv";
-import { connectDB } from "../../database/connect-database.mjs";
-import { redis } from "../../database/redis.mjs";
+const dotenv = require("dotenv");
+const { connectDB } = require("../../database/connect-database.mjs");
+const { redis } = require("../../database/redis.mjs");
 dotenv.config();
 
 beforeAll(async () => {
