@@ -46,11 +46,11 @@ export const getSkills = async (req, res) => {
     const skip = (page - 1) * limit;
     const cachedKey = `skills:${page}`;
 
-    const cachedSkills = await redis.get(cachedKey);
-    if (cachedSkills) {
-      sendSuccessResponse(res, 200, null, cachedSkills);
-      return;
-    }
+    // const cachedSkills = await redis.get(cachedKey);
+    // if (cachedSkills) {
+    //   sendSuccessResponse(res, 200, null, cachedSkills);
+    //   return;
+    // }
     const skills = await Skill.find().skip(skip).limit(limit);
     const total = await Skill.countDocuments();
     const hasMore = skills.length + skip < total;
