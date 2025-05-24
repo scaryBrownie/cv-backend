@@ -9,7 +9,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./database/connect-database.mjs";
 import requestLogger from "./middleware/request-logger.mjs";
 import { swagger, swaggerUi } from "./util/swagger.mjs";
-
+import cookieParser from "cookie-parser";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -21,6 +21,8 @@ app.set("trust proxy", 1);
 appSecurity(app);
 app.use(ddosLimiter);
 app.use(requestLogger);
+
+app.use(cookieParser());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swagger));
 
