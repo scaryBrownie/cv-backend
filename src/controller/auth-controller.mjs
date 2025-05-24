@@ -68,5 +68,6 @@ export const login = async (req, res) => {
     });
   }
 };
-
-exporess;
+export const dummyFunc = async (req, res) => {
+  res.status(200).json({ message: "dummy func." });
+};
