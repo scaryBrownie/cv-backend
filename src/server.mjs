@@ -12,6 +12,7 @@ import { swagger, swaggerUi } from "./util/swagger.mjs";
 import cookieParser from "cookie-parser";
 import path from "path";
 import { fileURLToPath } from "url";
+import { json } from "stream/consumers";
 
 dotenv.config();
 
@@ -23,6 +24,8 @@ app.use(ddosLimiter);
 app.use(requestLogger);
 
 app.use(cookieParser());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swagger));
 
