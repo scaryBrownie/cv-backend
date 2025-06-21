@@ -42,7 +42,7 @@ import { redis } from "../database/redis.mjs";
 export const getSkills = async (req, res) => {
   try {
     const page = req.query.page || 1;
-    const limit = 15;
+    const limit = 20;
     const skip = (page - 1) * limit;
     const cachedKey = `skills:${page}`;
 
